@@ -15,17 +15,9 @@ public class VisionController {
 
     private VisionService visionService;
 
-    @PostMapping("/extractTextFromImage")
-    public String extractTextFromImage(
-            @RequestParam MultipartFile file) {
-
-        return visionService.extractTextFromImage(file);
-    }
-
     @PostMapping("/extractTextFromPdf")
     public List<String> extractTextFromPdf(
             @RequestParam MultipartFile file) {
-
         return visionService.extractTextFromPdf(file);
     }
 }
